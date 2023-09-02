@@ -8,12 +8,10 @@ LemmyKit is a Swift package that provides a data model for interacting with the 
 
 ## Installation
 
-### Swift Package Manager (SPM)
+### Swift Package Manager
 
-You can use the Swift Package Manager to install LemmyKit. Add the following dependency to your `Package.swift`
+File > Swift Packages > Add Package Dependency
 
+Add `https://github.com/mani-sh-reddy/LemmyKit.git`
 
-```swift
-dependencies: [
-    .package(url: "https://github.com/yourusername/LemmyKit.git", from: "1.0.0")
-]
+Select "Up to Next Major"
