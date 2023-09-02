@@ -5,7 +5,7 @@ import Foundation
 
 public struct Community: Codable {
     /// CommunityId
-    public var id: Double
+    public var id: Double?
     /// Community.name
     public var name: String
     /// Community.title
@@ -31,7 +31,7 @@ public struct Community: Codable {
     /// Community.banner
     public var banner: String?
     /// Community.followers_url
-    public var followersURL: String
+    public var followersURL: String?
     /// Community.inbox_url
     public var inboxURL: String?
     /// Community.hidden
@@ -63,7 +63,7 @@ public struct Community: Codable {
 
     public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: StringCodingKey.self)
-        self.id = try values.decode(Double.self, forKey: "id")
+        self.id = try values.decodeIfPresent(Double.self, forKey: "id")
         self.name = try values.decode(String.self, forKey: "name")
         self.title = try values.decode(String.self, forKey: "title")
         self.description = try values.decodeIfPresent(String.self, forKey: "description")
@@ -76,7 +76,7 @@ public struct Community: Codable {
         self.isLocal = try values.decode(Bool.self, forKey: "local")
         self.icon = try values.decodeIfPresent(String.self, forKey: "icon")
         self.banner = try values.decodeIfPresent(String.self, forKey: "banner")
-        self.followersURL = try values.decode(String.self, forKey: "followers_url")
+        self.followersURL = try values.decodeIfPresent(String.self, forKey: "followers_url")
         self.inboxURL = try values.decodeIfPresent(String.self, forKey: "inbox_url")
         self.isHidden = try values.decode(Bool.self, forKey: "hidden")
         self.isPostingRestrictedToMods = try values.decode(Bool.self, forKey: "posting_restricted_to_mods")
