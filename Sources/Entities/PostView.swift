@@ -24,8 +24,10 @@ public struct PostView: Codable {
     public var myVote: Double?
     /// PostView.unread_comments
     public var unreadComments: Double
+    /// PostView.unread_comments
+    public var inbox_url: String?
 
-    public init(post: Post, creator: Person, community: Community, isCreatorBannedFromCommunity: Bool, counts: PostAggregates, subscribed: SubscribedType, isSaved: Bool, isRead: Bool, isCreatorBlocked: Bool, myVote: Double? = nil, unreadComments: Double) {
+  public init(post: Post, creator: Person, community: Community, isCreatorBannedFromCommunity: Bool, counts: PostAggregates, subscribed: SubscribedType, isSaved: Bool, isRead: Bool, isCreatorBlocked: Bool, myVote: Double? = nil, unreadComments: Double, inboxURL: String? = nil) {
         self.post = post
         self.creator = creator
         self.community = community
@@ -37,6 +39,7 @@ public struct PostView: Codable {
         self.isCreatorBlocked = isCreatorBlocked
         self.myVote = myVote
         self.unreadComments = unreadComments
+      self.inbox_url = inboxURL
     }
 
     public init(from decoder: Decoder) throws {
