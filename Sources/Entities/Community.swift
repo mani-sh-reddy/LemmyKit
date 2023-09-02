@@ -77,7 +77,7 @@ public struct Community: Codable {
         self.icon = try values.decodeIfPresent(String.self, forKey: "icon")
         self.banner = try values.decodeIfPresent(String.self, forKey: "banner")
         self.followersURL = try values.decode(String.self, forKey: "followers_url")
-        self.inboxURL = try values.decode(String.self, forKey: "inbox_url")
+        self.inboxURL = try values.decodeIfPresent(String.self, forKey: "inbox_url")
         self.isHidden = try values.decode(Bool.self, forKey: "hidden")
         self.isPostingRestrictedToMods = try values.decode(Bool.self, forKey: "posting_restricted_to_mods")
         self.instanceID = try values.decode(Double.self, forKey: "instance_id")

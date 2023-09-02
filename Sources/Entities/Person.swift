@@ -75,7 +75,7 @@ public struct Person: Codable {
         self.isLocal = try values.decode(Bool.self, forKey: "local")
         self.banner = try values.decodeIfPresent(String.self, forKey: "banner")
         self.isDeleted = try values.decode(Bool.self, forKey: "deleted")
-        self.inboxURL = try values.decode(String.self, forKey: "inbox_url")
+        self.inboxURL = try values.decodeIfPresent(String.self, forKey: "inbox_url")
         self.matrixUserID = try values.decodeIfPresent(String.self, forKey: "matrix_user_id")
         self.isAdmin = try values.decode(Bool.self, forKey: "admin")
         self.isBotAccount = try values.decode(Bool.self, forKey: "bot_account")

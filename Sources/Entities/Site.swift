@@ -25,7 +25,7 @@ public struct Site: Codable {
     /// Site.last_refreshed_at
     public var lastRefreshedAt: String
     /// Site.inbox_url
-    public var inboxURL: String
+    public var inboxURL: String?
     /// Site.private_key
     public var privateKey: String?
     /// Site.public_key
@@ -61,7 +61,7 @@ public struct Site: Codable {
         self.description = try values.decodeIfPresent(String.self, forKey: "description")
         self.actorID = try values.decode(String.self, forKey: "actor_id")
         self.lastRefreshedAt = try values.decode(String.self, forKey: "last_refreshed_at")
-        self.inboxURL = try values.decode(String.self, forKey: "inbox_url")
+        self.inboxURL = try values.decodeIfPresent(String.self, forKey: "inbox_url")
         self.privateKey = try values.decodeIfPresent(String.self, forKey: "private_key")
         self.publicKey = try values.decode(String.self, forKey: "public_key")
         self.instanceID = try values.decode(Double.self, forKey: "instance_id")
