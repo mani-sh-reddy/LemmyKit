@@ -29,7 +29,7 @@ public struct Person: Codable {
     /// Person.deleted
     public var isDeleted: Bool
     /// Person.inbox_url
-    public var inboxURL: String
+    public var inboxURL: String?
     /// Person.matrix_user_id
     public var matrixUserID: String?
     /// Person.admin

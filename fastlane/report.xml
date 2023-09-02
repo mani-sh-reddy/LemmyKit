@@ -6,52 +6,52 @@
     
       
       <testcase classname="fastlane.lanes" name="0: git describe --abbrev=0 --tags | tr -d &apos;
-&apos;" time="0.017163">
+&apos;" time="0.018341">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: opt_out_usage" time="0.000172">
+      <testcase classname="fastlane.lanes" name="1: opt_out_usage" time="0.000163">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: update_fastlane" time="1.742732">
+      <testcase classname="fastlane.lanes" name="2: update_fastlane" time="1.686299">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: default_platform" time="0.000148">
+      <testcase classname="fastlane.lanes" name="3: default_platform" time="0.000152">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: default_platform" time="7.6e-05">
+      <testcase classname="fastlane.lanes" name="4: default_platform" time="7.9e-05">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="5: git_add" time="0.108351">
+      <testcase classname="fastlane.lanes" name="5: git_add" time="0.124248">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="6: add_git_tag" time="0.096447">
+      <testcase classname="fastlane.lanes" name="6: add_git_tag" time="0.112473">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="7: git_commit" time="0.289355">
+      <testcase classname="fastlane.lanes" name="7: git_commit" time="0.308003">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="8: push_to_git_remote" time="1.476134">
+      <testcase classname="fastlane.lanes" name="8: push_to_git_remote" time="1.329148">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="9: set_github_release" time="0.596366">
+      <testcase classname="fastlane.lanes" name="9: set_github_release" time="0.563919">
         
       </testcase>
     
