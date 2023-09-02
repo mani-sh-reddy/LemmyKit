@@ -1,0 +1,54 @@
+# This file contains the fastlane.tools configuration
+
+# sem_ver_tag = UI.select("Select Semantic Versioning Tag: ", ["major", "minor", "patch"])
+
+line_separator = "========================================================================="
+
+latest_git_tag = sh("git describe --abbrev=0 --tags | tr -d '\n'")
+
+opt_out_usage
+update_fastlane
+
+default_platform(:ios)
+
+REPO_GITHUB_TOKEN = ENV["REPO_GITHUB_TOKEN"]
+
+default_platform(:ios)
+platform :ios do
+  desc "Uplift version, commit and generate release note"
+  lane :UPLIFT_RELEASE do
+
+    parts = latest_git_tag.split(".")
+
+    major = parts[0]
+    minor = parts[1]
+    patch = parts[2]
+
+    target_major = (major.to_i + 1).to_s + ".0.0"
+    target_minor = major + "." + (minor.to_i + 1).to_s + ".0"
+    target_patch = major + "." + minor + "." + (patch.to_i + 1).to_s
+
+    git_add(path: ".")
+
+    add_git_tag(
+      tag: target_patch
+    )
+    
+    git_commit(path: ".", message: "LemmyKit v#{target_patch}")
+   
+    push_to_git_remote(
+      remote: "origin",         # optional, default: "origin"
+      local_branch: "main",  # optional, aliased by "branch", default is set to current branch
+      remote_branch: "main", # optional, default is set to local_branch
+    )
+
+    github_release = set_github_release(
+      repository_name: "mani-sh-reddy/LemmyKit",
+      api_token: "#{REPO_GITHUB_TOKEN}",
+      name: target_patch,
+      tag_name: target_patch,
+      commitish: "main"
+    )
+  end
+
+end
