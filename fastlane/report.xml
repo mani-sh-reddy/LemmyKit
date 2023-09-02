@@ -6,17 +6,17 @@
     
       
       <testcase classname="fastlane.lanes" name="0: git describe --abbrev=0 --tags | tr -d &apos;
-&apos;" time="0.015197">
+&apos;" time="0.01628">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: opt_out_usage" time="0.000182">
+      <testcase classname="fastlane.lanes" name="1: opt_out_usage" time="0.000177">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: update_fastlane" time="1.670359">
+      <testcase classname="fastlane.lanes" name="2: update_fastlane" time="2.003517">
         
       </testcase>
     
@@ -26,32 +26,32 @@
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: default_platform" time="7.4e-05">
+      <testcase classname="fastlane.lanes" name="4: default_platform" time="6.9e-05">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="5: git_add" time="0.10615">
+      <testcase classname="fastlane.lanes" name="5: git_add" time="0.107496">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="6: add_git_tag" time="0.091956">
+      <testcase classname="fastlane.lanes" name="6: add_git_tag" time="0.090395">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="7: git_commit" time="0.269813">
+      <testcase classname="fastlane.lanes" name="7: git_commit" time="0.293467">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="8: push_to_git_remote" time="1.312927">
+      <testcase classname="fastlane.lanes" name="8: push_to_git_remote" time="1.418361">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="9: set_github_release" time="0.661903">
+      <testcase classname="fastlane.lanes" name="9: set_github_release" time="0.543793">
         
       </testcase>
     
