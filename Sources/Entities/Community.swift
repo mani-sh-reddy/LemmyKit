@@ -33,7 +33,7 @@ public struct Community: Codable {
     /// Community.followers_url
     public var followersURL: String
     /// Community.inbox_url
-    public var inboxURL: String
+    public var inboxURL: String?
     /// Community.hidden
     public var isHidden: Bool
     /// Community.posting_restricted_to_mods
