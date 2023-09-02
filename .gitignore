@@ -1,4 +1,4 @@
-./fastlane/report.xml
+fastlane/report.xml
 .build/**
-./Package.resolved
-./Gemfile.lock
+Package.resolved
+Gemfile.lock
